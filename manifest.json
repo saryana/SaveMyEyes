@@ -7,9 +7,11 @@
 	
 	"background": {
 		"persistent": true,
-		"scripts": ["background.js"]
+		"scripts": ["thirdParty/jquery.min.js", "background.js"]
 	},
-
+	"permissions": [
+		"storage"
+	],
 
 	"browser_action": {
 		"desault_icon": "icon.png",

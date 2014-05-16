@@ -1,6 +1,6 @@
 "use strict";
-var USE_TIME = .1;
-var WAIT_TIME = .1;
+var USE_TIME = .3;
+var WAIT_TIME = .3;
 
 var useSeconds = Math.floor(USE_TIME*60);
 var waitSeconds = Math.floor(WAIT_TIME*60);
@@ -33,7 +33,7 @@ function waitCountdown() {
 		waitSeconds = WAIT_TIME*60;
 		clearInterval(waitTimer);
 		window.setTimeout(function() {
-			alert('remember to look awa in ' + useSeconds + ' or I\'ll be here to remind you');
+			alert('remember to look away in ' + useSeconds + ' or I\'ll be here to remind you');
 		}, 1);
 		useTimer = setInterval(useCountdown, 1000);
 	} else {
@@ -50,3 +50,15 @@ function printTime(time, msg) {
 	var sec = time%60;
 	console.log(msg + ' min: ' + min + ' sec: ' + sec);
 }
+
+
+
+/***** EVENT HANDLEING *****/
+console.log($('#update'));
+$('#update').click(function() {
+	console.log('hi');
+	var newUserTime = $('#usetime').val();
+	var newWaitTime = $('#waittime').val();
+
+	console.log(newWaitTime + ' ' + newWaitTime);
+});
